@@ -24,5 +24,5 @@ COPY package*.json ./
 
 RUN npm install
 COPY ./backend ./backend
-EXPOSE 80
+EXPOSE 8080
 CMD [ "node", "./backend/index.js" ]
