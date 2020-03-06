@@ -24,5 +24,6 @@ COPY package*.json ./
 
 RUN npm install
 COPY ./backend ./backend
-EXPOSE 8080
+
+ENV PORT=$PORT
 CMD [ "node", "./backend/index.js" ]
