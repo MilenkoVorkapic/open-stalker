@@ -9,9 +9,12 @@ function App() {
     try {
       setData();
       setLoading(true);
-      const res = await axios.get(`http://localhost:8080/${search}`, {
-        timeout: 5000000
-      });
+      const res = await axios.get(
+        `https://open-stalker.herokuapp.com/${search}`,
+        {
+          timeout: 5000000
+        }
+      );
       const found = res.data.match(/\bhttps?:\/\/\S+/gi);
       setData(found);
       setLoading(false);
