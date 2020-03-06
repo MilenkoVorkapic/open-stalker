@@ -39,7 +39,9 @@ function App() {
             {data.map(url => (
               <Fragment key={url}>
                 <br />
-                <a href={url}>{url}</a>
+                <a href={url} target="_blank">
+                  {url}
+                </a>
               </Fragment>
             ))}
           </>
